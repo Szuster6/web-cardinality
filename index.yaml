@@ -3,6 +3,16 @@ entries:
   web-cardinality:
   - apiVersion: v2
     appVersion: 1.25.0
+    created: "2023-06-28T20:18:43.627783808Z"
+    description: A Helm chart for Kubernetes
+    digest: a4fb35f4332f992edb7b04750cc95cfc772d3349e2787216271768602a4249bb
+    name: web-cardinality
+    type: application
+    urls:
+    - https://github.com/Szuster6/web-cardinality/releases/download/web-cardinality-0.1.1/web-cardinality-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 1.25.0
     created: "2023-06-28T18:47:44.780287554+02:00"
     description: A Helm chart for Kubernetes
     digest: 00e37f0e82bcc49ff4d44e17593eafd57660fda52ae50f73c423874922cab29a
@@ -11,4 +21,4 @@ entries:
     urls:
     - web-cardinality-0.1.0.tgz
     version: 0.1.0
-generated: "2023-06-28T18:47:44.779439646+02:00"
+generated: "2023-06-28T20:18:43.627790009Z"
