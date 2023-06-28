@@ -17,11 +17,11 @@ htpasswd -c auth webmaster
 
 4. Deploy helm chart without ingress controller installed
 ```
-helm upgrade web-cardinality ../web-cardinality/ --set ssl.tlscrt="$(cat web-cardinality.com.crt)",ssl.tlskey="$(cat web-cardinality.com.key)",basicAuth.htpasswd="$(cat auth)",service.type="LoadBalancer"
+helm install web-cardinality ./helm-chart/ --set ssl.tlscrt="$(cat ../certs/web-cardinality.com.crt)",ssl.tlskey="$(cat ../certs/web-cardinality.com.key)",basicAuth.htpasswd="$(cat ../certs/auth)",service.type="LoadBalancer"
 ```
 5. Deploy helm chart with ingress controller installed
 ```
-helm upgrade web-cardinality ../web-cardinality/ --set ssl.tlscrt="$(cat web-cardinality.com.crt)",ssl.tlskey="$(cat web-cardinality.com.key)",basicAuth.htpasswd="$(cat auth)",service.type="ClusterIP",ingress.enabled="true"
+helm install web-cardinality ./helm-chart/ --set ssl.tlscrt="$(cat ../certs/web-cardinality.com.crt)",ssl.tlskey="$(cat ../certs/web-cardinality.com.key)",basicAuth.htpasswd="$(cat ../certs/auth)",service.type="ClusterIP",ingress.enabled="true"
 ```
 
 
