@@ -3,7 +3,7 @@ name: Release Charts
 on:
   push:
     branches:
-      - main
+      - master
 
 inputs:
   charts_dir: helm-chart
