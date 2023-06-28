@@ -5,9 +5,6 @@ on:
     branches:
       - master
 
-inputs:
-  charts_dir: helm-chart
-
 jobs:
   release:
     # depending on default permission settings for your org (contents being read-only or read-write for workloads), you will have to add permissions
@@ -31,5 +28,7 @@ jobs:
 
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.6.0
+        with:
+          charts_dir: "helm-chart"
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
